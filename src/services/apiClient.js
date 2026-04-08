@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "https://seatflow-backend-xnoc.vercel.app";
+export const BASE_URL = "https://seatflow-backend-pw2p.vercel.app";
 
 const apiClient = axios.create({
   baseURL: BASE_URL,
