@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --font-sans: 'Work Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+@theme {
+  --color-primary-50: #f0fdfa;
+  --color-primary-100: #ccfbf1;
+  --color-primary-200: #99f6e4;
+  --color-primary-300: #5eead4;
+  --color-primary-400: #2dd4bf;
+  --color-primary-500: #14b8a6;
+  --color-primary-600: #ea2a33; /* Upgraded to the vibrant Red requested in design */
+  --color-primary-700: #b91c1c; /* Darker Red */
+  
+  --font-family-sans: var(--font-sans);
+}
+
+body {
+  font-family: var(--font-sans);
+  @apply bg-[#fcf9f7] text-[#181111] antialiased;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* 3D Animation Utilities */
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .translate-z-content {
+    transform: translateZ(40px);
+  }
+}
